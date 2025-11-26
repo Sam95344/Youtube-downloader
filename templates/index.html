@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <!-- Favicon के लिए बेहतर कोड -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Downloader</h1>
+        <p>Paste a YouTube video URL below and click "Fetch Info".</p>
+        
+        <div class="form-container">
+            <input type="text" id="youtube-url" placeholder="e.g., https://www.youtube.com/watch?v=...">
+            <button id="fetch-button"><i class="fas fa-search"></i> Fetch Info</button>
+        </div>
+
+        <div id="video-info" class="hidden">
+            <img id="thumbnail" src="" alt="Video Thumbnail">
+            <h2 id="video-title"></h2>
+            <div class="quality-selection">
+                <select id="quality-options"></select>
+                <button id="download-button"><i class="fas fa-download"></i> Download</button>
+            </div>
+        </div>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p id="loader-text">Processing, please wait...</p>
+        </div>
+
+        <div id="error-message" class="hidden"></div>
+
+        <div id="download-link-container" class="hidden">
+            <p>Your download is ready!</p>
+            <a id="download-link" href="" download>Click Here to Download</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 YouTube Downloader. Created by ig_sam_8084 ❤️.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
