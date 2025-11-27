@@ -19,7 +19,7 @@ This project is built with:
 
 - **Python**
 - **Flask**: For the web framework.
-- **Pytube**: For interacting with YouTube.
+- **yt-dlp**: For interacting with YouTube.
 
 ---
 
@@ -53,6 +53,14 @@ This project is built with:
     ```
 
 3.  Paste the YouTube video URL into the input box, and click the button to fetch the download links.
+
+---
+
+## 🌐 Deployment
+
+This application is configured for easy deployment on [Vercel](https://vercel.com/).
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2FYoutube-downloader)
 
 ---
 

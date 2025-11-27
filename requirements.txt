@@ -1,2 +1,4 @@
 Flask
-pytube
+yt-dlp
+gunicorn
+ffmpeg-python
